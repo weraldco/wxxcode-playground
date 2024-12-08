@@ -54,7 +54,7 @@ export default function SignUpForm() {
 	}
 
 	return (
-		<Card className="w-full max-w-md mx-auto mt-36 md:mt-0 bg-[#18191A] border-0 text-white">
+		<Card className="w-full max-w-md mx-auto md:mt-0 bg-[#18191A] border-0 text-white">
 			<CardHeader>
 				<CardTitle>Sign Up</CardTitle>
 				<CardDescription>

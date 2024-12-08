@@ -15,10 +15,10 @@ export default async function DashboardPage() {
 		redirect('/');
 	}
 	return (
-		<div>
+		<div className="flex flex-col ">
 			<Navbar session={session} />
 
-			<div className="flex flex-col items-center justify-center h-[60vh] text-center gap-4">
+			<div className="flex flex-col items-center justify-center  text-center gap-4">
 				<div className="flex flex-col justify-center items-center gap-4">
 					<span className={`text-4xl md:text-5xl ${noto.className}`}>
 						Welcome aboard,
@@ -40,7 +40,7 @@ export default async function DashboardPage() {
 						<div className="text-sm md:text-base italic w-[300px] md:w-[400px] flex flex-col gap-2">
 							<span>Your Secret Santa is</span>
 							<div className="bg-teal-500 p-10 rounded-xl flex flex-col gap-10">
-								<span className=" font-bold text-5xl text-pink-300 ">
+								<span className=" font-bold text-[250%] md:text-5xl text-pink-300 ">
 									{session.user.youPicked.toUpperCase()}
 								</span>
 							</div>
