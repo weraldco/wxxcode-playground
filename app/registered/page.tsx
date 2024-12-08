@@ -3,7 +3,6 @@ import React from 'react';
 
 export default async function RegisteredPage() {
 	const users = await getAllTheUser();
-	console.log(users.props);
 	return (
 		<div className=" flex flex-col justify-center items-center h-[60vh] gap-4">
 			<h1 className="text-2xl font-bold">Registered Guest</h1>
@@ -20,7 +19,7 @@ export default async function RegisteredPage() {
 			</div>
 			{users && (
 				<ul className="flex flex-col gap-2">
-					{users.props.users.map((user, i) => (
+					{users.map((user, i) => (
 						<li key={i} className="group flex flex-row gap-2 ">
 							<span
 								className={`${
