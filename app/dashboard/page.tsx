@@ -16,7 +16,7 @@ export default async function DashboardPage() {
 	}
 	return (
 		<div>
-			<Navbar />
+			<Navbar session={session} />
 
 			<div className="flex flex-col items-center justify-center h-[60vh] text-center gap-4">
 				<div className="flex flex-col justify-center items-center gap-4">
