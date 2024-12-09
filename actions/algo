@@ -1,0 +1,27 @@
+
+function generateSecretSanta(participants) {
+  // Step 1: Shuffle the participants using Fisher-Yates algorithm
+  const shuffledParticipants = [...participants];  // Create a copy to shuffle
+  for (let i = shuffledParticipants.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));  // Random index
+    [shuffledParticipants[i], shuffledParticipants[j]] = [shuffledParticipants[j], shuffledParticipants[i]];  // Swap
+  }
+
+  // Step 2: Assign each participant to the next in the shuffled list
+  const assignments = {};
+
+  for (let i = 0; i < participants.length; i++) {
+    const giver = participants[i];
+    const receiver = shuffledParticipants[i === participants.length - 1 ? 0 : i + 1]; // If last person, match with first person
+    assignments[giver] = receiver;
+  }
+
+  return assignments;
+}
+
+// Example usage
+const participants = ['Alice', 'Bob', 'Charlie', 'Dave', 'Eve'];
+
+const secretSantaAssignments = generateSecretSanta(participants);
+
+console.log(secretSantaAssignments);
